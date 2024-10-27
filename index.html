@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Método Regula Falsi</title>
+    <style>
+        /* Estilos embutidos específicos da página */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Fundo preto */
+            color: #FFA500; /* Texto em laranja */
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 48px;
+            margin: 20px;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 5px;
+            background-color: #1a1a1a; /* Fundo levemente mais claro */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            color: #FFA500; /* Texto do rótulo em laranja */
+        }
+
+        input, button {
+            width: calc(100% - 20px);
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-size: 24px;
+        }
+
+        input {
+            border: 1px solid #FFA500;
+            background-color: #000; /* Fundo do input preto */
+            color: #FFA500;
+        }
+
+        button {
+            background-color: #FFA500;
+            color: #000;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff8c00;
+        }
+
+        table {
+            width: 100%;
+            max-width: 800px;
+            border-collapse: collapse;
+            margin: 10px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        th, td {
+            border: 1px solid #FFA500;
+            padding: 6px;
+            text-align: center;
+            color: #FFA500; /* Texto em laranja */
+        }
+
+        th {
+            background-color: #FFA500;
+            color: #000;
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Método Regula Falsi</h1>
+    <div class="form-container">
+        <label for="func">Digite a função:</label>
+        <input type="text" id="func" placeholder="Exemplo: x^3 - x -1" required>
+
+        <label for="a">Digite (a):</label>
+        <input type="number" id="a" placeholder="Limite inferior (a)" required>
+
+        <label for="b">Digite (b):</label>
+        <input type="number" id="b" placeholder="Limite superior (b)" required>
+
+        <label for="tol">Digite a tolerância:</label>
+        <input type="number" id="tol" step="any" placeholder="Tolerância (ex: 0.001)" required>
+        <small>Insira um valor positivo para a tolerância (ex: 0.001).</small>
+
+        <label for="maxIter">Digite o máximo de iterações:</label>
+        <input type="number" id="maxIter" placeholder="Máx. Iterações" required>
+
+        <button onclick="regulaFalsi()">Calcular</button>
+    </div>
+    <div id="output" class="output-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Iteração</th>
+                    <th>a</th>
+                    <th>f(a)</th>
+                    <th>b</th>
+                    <th>f(b)</th>
+                    <th>xk</th>
+                    <th>f(xk)</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.2.0/math.min.js"></script>
+    <script src="falsaPosicao.js"></script>
+</body>
+</html>
