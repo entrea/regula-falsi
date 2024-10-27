@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Método Regula Falsi</title>
+
+
+
     <style>
         /* Estilos embutidos específicos da página */
         body {
@@ -14,74 +17,93 @@
             background-color: #000; /* Fundo preto */
             color: #FFA500; /* Texto em laranja */
         }
-
+    
         h1 {
             text-align: center;
             font-size: 48px;
             margin: 20px;
         }
-
+    
         .form-container {
-            max-width: 500px;
-            margin: 20px auto;
-            padding: 5px;
+            max-width: 20%;
+            margin: 15px auto;
+            padding: 10px; /* Aumenta levemente o padding do contêiner */
             background-color: #1a1a1a; /* Fundo levemente mais claro */
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-
+    
         label {
             font-weight: bold;
             margin-top: 10px;
             color: #FFA500; /* Texto do rótulo em laranja */
         }
-
+    
         input, button {
-            width: calc(100% - 20px);
-            padding: 15px;
-            margin-bottom: 20px;
+            width: calc(80% - 20px);
+            padding: 10px; /* Diminui o padding para 10px */
+            margin-bottom: 10px; /* Diminui a margem inferior para 10px */
             border-radius: 5px;
             font-size: 24px;
         }
-
+    
         input {
             border: 1px solid #FFA500;
             background-color: #000; /* Fundo do input preto */
             color: #FFA500;
         }
-
+    
         button {
             background-color: #FFA500;
             color: #000;
             border: none;
             cursor: pointer;
         }
-
+    
         button:hover {
             background-color: #ff8c00;
         }
-
+    
         table {
-            width: 100%;
-            max-width: 800px;
+            width: 30%;
+            max-width: 21%;
             border-collapse: collapse;
             margin: 10px auto;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-
+    
         th, td {
             border: 1px solid #FFA500;
-            padding: 6px;
+            padding: 6px; /* Mantém o padding como 6px */
             text-align: center;
             color: #FFA500; /* Texto em laranja */
         }
-
+    
         th {
             background-color: #FFA500;
             color: #000;
             font-size: 32px;
         }
+    
+        /* Media queries para responsividade */
+        @media (max-width: 600px) {
+            .form-container {
+                max-width: 90%; /* Ajusta para telas menores */
+            }
+    
+            input, button {
+                width: 90%; /* Faz com que inputs e botões ocupem mais espaço */
+                padding: 8px; /* Ajusta o padding para dispositivos móveis */
+            }
+    
+            h1 {
+                font-size: 36px; /* Diminui o tamanho da fonte do cabeçalho */
+            }
+        }
     </style>
+    
+
+
 </head>
 <body>
     <h1>Método Regula Falsi</h1>
@@ -97,7 +119,7 @@
 
         <label for="tol">Digite a tolerância:</label>
         <input type="number" id="tol" step="any" placeholder="Tolerância (ex: 0.001)" required>
-        <small>Insira um valor positivo para a tolerância (ex: 0.001).</small>
+     
 
         <label for="maxIter">Digite o máximo de iterações:</label>
         <input type="number" id="maxIter" placeholder="Máx. Iterações" required>
@@ -108,7 +130,7 @@
         <table>
             <thead>
                 <tr>
-                    <th>Iteração</th>
+                    <th>Iter</th>
                     <th>a</th>
                     <th>f(a)</th>
                     <th>b</th>
