@@ -52,7 +52,7 @@ button:hover {
 }
 
 table {
-    width: 80%; /* Ajuste a largura para 100% para caber em dispositivos menores */
+    width: 100%; /* Ajuste a largura para 100% para caber em dispositivos menores */
     border-collapse: collapse;
     margin-top: 10px;
     overflow-x: auto;
