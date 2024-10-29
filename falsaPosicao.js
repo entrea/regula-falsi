@@ -10,7 +10,8 @@ function evaluateFunction(func, x) {
 // Função para aplicar o método Regula Falsi
 function regulaFalsi() {
     // Obtém valores de entrada do HTML
-    const func = document.getElementById("func").value;
+    let func = document.getElementById("func").value;
+    func = func.replace(/X/g, 'x'); // Substitui "X" maiúsculo por "x" minúsculo
     let a = parseFloat(document.getElementById("a").value);
     let b = parseFloat(document.getElementById("b").value);
     const tol = parseFloat(document.getElementById("tol").value);
